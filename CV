@@ -1,0 +1,546 @@
+<?php
+@ob_start();
+session_start();
+
+// error_reporting(E_ALL);
+// ini_set("display_errors", 1);
+
+// connect to database
+include ("_config.php"); // you will need to edit _info.php for connection  
+?>
+<!DOCTYPE html>
+<html lang = "NL">
+<!-- START HEADER WITH META -->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+Curriculum Vitae  @ <?=$site?>
+</title>
+<?PHP
+// Header contains meta, style and sheets
+include ("_header.php"); // editable for more css styles 
+?>
+<style>
+.container {
+    position: relative;
+    width: 250px;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  font-size: 16px;
+  padding: 16px 32px;
+}
+</style>
+
+<style>
+.containerr {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.bottom-leftt {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.top-leftt {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+.top-rightt {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.bottom-rightt {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<!-- START BODY -->
+<body>
+<?PHP
+// TOP navigation, contains menu
+include ("_Navbar.php"); // editable for page navigation  
+?>
+<div class="container-fluid">
+<div class="row">
+<div class="col-5 p-3  bg-dark text-white text-justify">
+<h4><p class="text-right">Curriculum Vitae</p></h4>
+<hr>
+<h5>  <center>Personalia</h5></center>
+<center> <div class="container TNicon">
+  <img src="/images/ik.jpeg" alt="Michel" class="TNicon image" style="width:100%">
+  <div class="middle ">Zoekt u een <br>
+web developer?
+    <div class="text"><img src="/images/TN.gif" alt="TN" style="border-radius: 50%;width:150px"><br>
+</div>Neemt u dan contact op:
+  </div>
+</div> </center>
+<div class="row">
+<div class="col-6 p-3 bg-dark text-white text-right">
+<b>Naam:<br>
+Voorletters:<br>
+Geboortedatum:<br>
+Geboorteplaats:<br>
+Nationaliteit:<br>
+woon/postadres:<br>
+<br>
+Telefoonnummer:<br> 
+Email adres:<br>
+Burgerlijke staat:<br> 
+</b>
+</div><div class="col-6 p-3  bg-dark text-white text-left">
+Michel de Nooijer<br>
+M.P.M.<br>
+13 Juni 1981<br>
+Boxmeer<br>
+Nederlands<br>
+Wolphaertsbocht 287<sup>A</sup><br>
+3083MP Rotterdam<br>
+<a href="tel:0610342626">06-1034-2626</a><br>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;info@techlastminute.nl">Stuur een mail</a><br>
+Ongehuwd, 2 kinderen<br>
+<br>
+
+</div>  
+</div> 
+<center> <div class="container" style="width:300px;">
+  <img src="/images/MeAndMyKids.jpg" alt="Michel" class="image" style="width:300px;">
+  <div class="middle">
+    <div class="text"><center><img src="/images/DJTN.jpg" alt="TN" style="border-radius: 50%;width:250px"></center><br>
+</div>
+  </div>
+</div> 
+</center>
+<hr> 
+<h5> Profiel</h5> 
+<p>Resultaatgericht, commercieel, representatief, creatief, doorzetter, enthousiast, teamplayer, vrolijk,  meedenkend, ondernemend, flexibel. Kent geen nee, gut niet bestut niet. Overal is een oplossing voor. Ieder nadeel heeft zijn voordeel. <br>
+Think positive!</p>
+<hr>
+<h4>Ervaringen</h4>
+<p>Stage Decoratie / stoffering (Flanel), Licht, Geluid, AV Techniek, LED screens, Rigging, operationeel project leider, Stagemanager, Stagehands, proces operator, hef&reachtruck, Laborant, .logistiek & Magazijn medewerker, web Developer & Troubleshooter</p>
+<hr>
+<h4>Werkervaring</h4>
+<button type="button" class="btn-block btn-dark">www.TechNooyer.nl<br>
+
+ <span class="badge badge-pill badge-danger">Since 2011</span> <span class="badge badge-pill badge-info">ZZP Freelance</span></button>
+Algemeen evenementen medewerker / Web Developer / Artist.<br>
+- Operationeel Project leider. <br>
+- Licht, geluid & led Technicus (AV). <br>
+- Evenementen Rigger. <br>
+- Heftruck / Manitou chauffeur.<br>
+- Werken op hoogte met klimtuig tot 40 meter.<br>
+- Werken op hoogte met een hoogwerker tot 50 meter.<br>
+- Podium Decorateur / Stoffeerder @ events algemeen.<br>
+- Profesioneel Dj.<br>
+<br>
+<button type="button" class="btn-block btn-dark">Quaker, Rotterdam.<br>
+ <span class="badge badge-pill badge-danger">2017</span> <span class="badge badge-pill badge-info">Tijdelijk parttime opdracht</span></button>
+Logistiek medewerker.<br>
+ Heftruck chauffeur.<br>
+<br>
+<button type="button" class="btn-block btn-dark">Tennand, Uden.<br>
+ <span class="badge badge-pill badge-danger">2017</span> <span class="badge badge-pill badge-info">Tijdelijk parttime opdracht</span></button>
+Heftruck chauffeur<br>
+Reachtruck chauffeur tot en met 10 meter hoog!<br>
+<br>
+<button type="button" class="btn-block btn-dark">Nutricia, Zoetermeer & Cuijk.<br>
+ <span class="badge badge-pill badge-danger">2008 - 2011</span> <span class="badge badge-pill badge-info">Vast contract</span></button>
+Machine & procesoperator.<br>
+Heftruck & reachtruck chauffeur.<br>
+Magazijn medewerker & grondstoffenspecialist.<br>
+<br>
+<button type="button" class="btn-block btn-dark">Creamy Creations, Rijkevoort.<br>
+ <span class="badge badge-pill badge-danger">2006 - 2008</span><span class="badge badge-pill badge-info">full time uitzendkracht</span><span class="badge badge-pill badge-primary">Randstad</span></button>
+proces operator likeuren,<br>
+Heftruck chauffeur, logistiek medewerker.<br>
+Kwaliteitscontroleur / Laborant.<br>
+<br>
+<button type="button" class="btn-block btn-dark">Evenementen algemeen, Nederland en Belgie.<br>
+ <span class="badge badge-pill badge-danger">2000 - 2011</span> <span class="badge badge-pill badge-info">Payroll</span></button>
+All Round stagehands @ Mojo Concerts.<br>
+Heftruck / Manitou chauffeur. <br>
+Freelance Licht, Geluid & Led Techniek. <br>
+<br>
+<button type="button" class="btn-block btn-dark">International Security Agency, ISA (Nederland).<br>
+ <span class="badge badge-pill badge-danger">2000 - 2006</span> <span class="badge badge-pill badge-info">Payroll</span></button>
+Beveiligingsmedewerker evenementen (ID&T – Q-Dance, Art, MOH, Rai etc.etc)<br>
+Beveiligingsmedewerker Objecten.<br>
+<br>
+<button type="button" class="btn-block btn-dark">Friki / Plukon, Boxmeer.<br>
+ <span class="badge badge-pill badge-danger">1997 - 2000</span> <span class="badge badge-pill badge-info">Vast contract</span></button>
+Machine operator / Heftruck chauffeur<br>
+Hard werken onder toeziend oog van mijn vader.<br>
+op (te) jonge leeftijd (15) gestopt met de middelbare school.<br>
+Slecht voorbereid op de werkelijke mogelijkheden in de maatschappij.<br>
+Ik heb mijzelf alsnog goed kunnen ontwikkelen in de praktijk tot HBO waardig denk en werk niveau.
+
+</p>
+
+</div>
+<div class="col-2 text-center bg-light">
+<?=$centermenuzien?>
+</div>
+<div class="col-5 p-3 mb-2 bg-dark text-white text-justify">
+<h4>  WEB develop skills</h4>
+<hr>
+<div class="row">
+<div class="col-7 p-3 mb-2 bg-dark text-white text-left">
+<h5>  Skill</h5>
+<button type="button" class="btn-block btn-primary">
+  PHP <span class="badge ">5.6+</span>
+</button>
+
+<button type="button" class="btn-block btn-primary">
+  MySQLi / SQL <span class="badge ">MYSQL</span>
+</button>
+
+<button type="button" class="btn-block btn-primary">
+  HTML <span class="badge ">5</span>
+</button>
+
+<button type="button" class="btn-block btn-primary">
+  CSS <span class="badge ">3</span>
+</button>
+
+<button type="button" class="btn-block btn-primary">
+  W3.CSS <span class="badge ">W3</span>
+</button>
+
+<button type="button" class="btn-block btn-primary">
+  BOOTSTRAP <span class="badge ">4</span>
+</button>
+
+<button type="button" class="btn-block btn-primary">
+  JAVASCRIPT <span class="badge ">JS</span>
+</button>
+
+<button type="button" class="btn-block btn-primary">
+  JQUERY <span class="badge ">W3</span>
+</button>
+
+<button type="button" class="btn-block btn-primary">
+  AJAX <span class="badge ">W3</span>
+</button>
+
+<button type="button" class="btn-block btn-primary">
+  ANGULAR <span class="badge ">A</span>
+</button>
+
+<button type="button" class="btn-block btn-primary">
+  WORDPRESS <span class="badge ">WP</span>
+</button>
+
+
+  
+    </div><div class="col-2 p-3 mb-2 bg-dark text-white text-center">
+    <h5>Sinds?</h5>
+	<button type="button" class="btn btn-dark" style="text-shadow:5px 5px 5px black;"> 2005</button><br>
+<button type="text" class="btn btn-dark" style="text-shadow:5px 5px 5px black;">2005</button><br>
+<button type="button" class="btn btn-dark" style="text-shadow:5px 5px 5px black;">1999</button><br>
+<button type="button" class="btn btn-dark" style="text-shadow:5px 5px 5px black;">1999</button><br>
+<button type="button" class="btn btn-dark" style="text-shadow:5px 5px 5px black;">2017</button><br>
+<button type="button" class="btn btn-dark" style="text-shadow:5px 5px 5px black;">2017</button><br>
+<button type="button" class="btn btn-dark" style="text-shadow:5px 5px 5px black;">1999</button><br>
+<button type="button" class="btn btn-dark" style="text-shadow:5px 5px 5px black;">2008</button><br>
+<button type="button" class="btn btn-dark" style="text-shadow:5px 5px 5px black;">2018</button><br>
+<button type="button" class="btn btn-dark" style="text-shadow:5px 5px 5px black;">2018</button><br>
+<button type="button" class="btn btn-dark" style="text-shadow:5px 5px 5px black;">2016</button>
+
+    </div><div class="col-3 p-3 mb-2 bg-dark text-white text-center">
+  <h5>Kennis?</h5>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+
+
+</div>
+</div>
+ <p>Bovenaan is meest favoriet, onderaan minst favoriet.</p>
+ <p>Met een gezonde portie doorzettingsvermogen en flink wat hulp via tutorials van de website <a href="www.W3SCHOOLS.com" title="Nr 1  tutorial website for webdevelopers" target="_blank">W3SCHOOLS.com</a> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> heb ik mijzelf bovenstaande programmeertalen aangeleerd. Nog steeds werk ik dagelijks met <a href="www.W3SCHOOLS.com" title="Nr 1  tutorial website for webdevelopers" target="_blank">W3SCHOOLS.com</a> om mijn kennis up2date te houden en daar waar nodig is te verbeteren om het gebruik van mijn computerkennis optimaal te houden.
+  <hr>
+  <h5>  Computer kennis</h5>
+  <div class="row">
+<div class="col-7 p-3 mb-2 bg-dark text-white text-left">
+<h5>  Ervaring met</h5>
+<button type="button" class="btn-block btn-danger">
+  Mijn Laptop <span class="badge ">HP</span>
+</button>
+
+<button type="button" class="btn-block btn-danger">
+  Windows <span class="badge ">10</span>
+</button>
+
+<button type="button" class="btn-block btn-danger">
+  Dreamweaver <span class="badge ">Adobe</span>
+</button>
+
+<button type="button" class="btn-block btn-danger">
+  SmartFTP <span class="badge ">FTP</span>
+</button>
+
+<button type="button" class="btn-block btn-danger">
+  Sound Forge <span class="badge ">10</span>
+</button>
+
+<button type="button" class="btn-block btn-danger">
+   Reason <span class="badge ">Propellerhead</span>
+</button>
+
+<button type="button" class="btn-block btn-danger">
+  Photoshop <span class="badge ">Adobe</span>
+</button>
+
+<button type="button" class="btn-block btn-danger">
+  Excel <span class="badge ">Office</span>
+</button>
+
+<button type="button" class="btn-block btn-danger">
+  Flash <span class="badge ">Adobe</span>
+</button>
+
+<button type="button" class="btn-block btn-danger">
+  Word <span class="badge ">office</span>
+</button>
+
+<button type="button" class="btn-block btn-danger">
+  Nieuwsgroepen <span class="badge ">Spotweb</span>
+</button>
+
+<button type="button" class="btn-block btn-danger">
+  World of warcraft <span class="badge ">WOW</span>
+</button>
+
+
+</div><div class="col-2 p-3 mb-2 bg-dark text-white text-center">
+
+<h5>Sinds</h5>
+<button type="button" class="btn btn-dark">2017</button><br>
+<button type="button" class="btn btn-dark">1997</button><br>
+<button type="button" class="btn btn-dark">1999</button><br>
+<button type="button" class="btn btn-dark">1999</button><br>
+<button type="button" class="btn btn-dark">1997</button><br>
+<button type="button" class="btn btn-dark">2000</button><br>
+<button type="button" class="btn btn-dark">1999</button><br>
+<button type="button" class="btn btn-dark">2004</button><br>
+<button type="button" class="btn btn-dark">1999</button><br>
+<button type="button" class="btn btn-dark">1997</button><br>
+<button type="button" class="btn btn-dark">2000</button><br>
+<button type="button" class="btn btn-dark">2005</button><br>
+
+</div><div class="col-3 p-3 mb-2 bg-dark text-white text-center">
+
+<h5>Kennis?</h5>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+</div>
+</div>
+Al sinds 1995 actief op de computer voor mijn hobby muziek. Van daaruit groeide mijn interesse in coderen wat ik leuk en interessant vond toe te passen aan mijn websites voor de muziek. mijn 3 favoriete bezigheden toendertijd: muziek en apparatuur, web development en via websites delen met de maatschappij voor sporadisch wat inkomsten als extratje. Een beetje uit de hand gelopen hobby levert mij al ruim 25 jaar plezier en mogelijkheden op EN bespaart ook onkosten door alles zelf te leren en alles in eigen beheer te houden.<sup>(tip)</sup>
+<hr>
+
+<h4> Cursussen</h4> 
+<div class="row">
+<div class="col-4 p-3 mb-2 bg-dark text-white text-left">
+<h5> Certificaat</h5> 
+<button type="button" class="btn-block btn-danger">
+  Heftruck 
+</button>
+<button type="button" class="btn-block btn-danger">
+  VCA 
+</button>
+<button type="button" class="btn-block btn-danger">
+  Heftruck 
+</button>
+<button type="button" class="btn-block btn-danger">
+  Reachtruck
+</button>
+<button type="button" class="btn-block btn-danger">
+  Hoogwerker 
+</button>
+<button type="button" class="btn-block btn-danger">
+  rijbewijs 
+</button>
+
+
+</div>
+<div class="col-2 p-3 mb-2 bg-dark text-white text-center">
+<h5> Start?</h5> 
+<button type="button" class="btn btn-dark">2006</button><br>
+<button type="button" class="btn btn-dark">2014</button><br>
+<button type="button" class="btn btn-dark">2015</button><br>
+<button type="button" class="btn btn-dark">2015</button><br>
+<button type="button" class="btn btn-dark">2016</button><br>
+<button type="button" class="btn btn-dark">2016</button><br>
+ </div>
+<div class="col-2 p-3 mb-2 bg-dark text-white text-center">
+<h5> Einde?</h5> 
+<button type="button" class="btn btn-dark">2011</button><br>
+<button type="button" class="btn btn-dark">2024</button><br>
+<button type="button" class="btn btn-dark">2020</button><br>
+<button type="button" class="btn btn-dark">2020</button><br>
+<button type="button" class="btn btn-dark">2021</button><br>
+<button type="button" class="btn btn-dark">2021</button><br>
+
+
+ 
+</div>
+<div class="col-4 p-3 mb-2 bg-dark text-white text-center">
+<h5> Skills?</h5> 
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+<button type="button" class="btn-block btn-success"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></button>
+</div>
+</div>
+Al sinds 1997 VCA verantwoord met de machines en auto's.
+<hr>
+
+<h4> TalenKennis</h4> 
+<div class="row">
+<div class="col-4 bg-dark text-dark text-center">
+ <div class="containerr">
+  <img src="/images/icon/netherlands.png" alt="Nederlands" style="width:100%;">
+   <div class="centered text-dark"><strong>Nederlands</strong><br>
+<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+  </div>
+</div> 
+</div> 
+
+<div class="col-4 bg-dark text-dark text-center">
+ <div class="containerr">
+  <img src="/images/icon/england.png" alt="england" style="width:100%;">
+   <div class="centered text-white">English
+<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+  </div>
+</div> 
+</div> 
+<div class="col-4 bg-dark text-dark text-center">
+ <div class="containerr">
+  <img src="/images/icon/germany.png" alt="Duits" style="width:100%;">
+   <div class="centered text-white"><strong>Deutsch</strong><br>
+<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></i>
+  </div>
+</div> </div>
+
+</div>
+
+<hr>
+<h4> Hobby's</h4> 
+<br>
+
+<div class="row">
+<div class="col-3 bg-dark text-dark text-center">
+  <img src="/images/dj/PioneerCDJ1000MK3.gif" alt="Duits" style="width:100%;
+box-shadow:5px 5px 7px black;">
+  <img src="images/dj/draaitafel.gif" style="width:100%;
+box-shadow:5px 5px 7px black;"  alt="TechNicks">
+  </div>
+  
+  
+<div class="col-6 bg-dark text-dark text-center">
+  <img src="/images/dj/PioneerDJM2000.jpg" alt="Duits" style="width:100%;
+box-shadow:5px 5px 7px black;">
+  </div>
+  
+  
+<div class="col-3 bg-dark text-dark text-center">
+  <img src="/images/dj/PioneerCDJ1000MK3.gif" alt="Duits" style="width:100%;
+box-shadow:5px 5px 7px black;">
+  <img src="images/dj/draaitafel.gif" style="width:100%;
+box-shadow:5px 5px 7px black;"  alt="TechNicks">
+  </div>
+ </div>
+
+
+
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<?PHP
+// JAVA SCRIPTS INCLUDED
+include ("_JS-scripts.php"); // editable for page footer 
+?>
+<?PHP
+// footer INCLUDED
+include ("_footer.php"); // editable for page footer 
+?>
+
+<!-- END BODY -->
+</body> 
+<!-- END HTML -->
+</html> 
+
+
+
